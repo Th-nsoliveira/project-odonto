@@ -20,3 +20,34 @@ h1{
  color: white;
 }
 
+.services{
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    padding-top: 75px;
+}
+
+/* apenas filhos diretos de content services vao receber isso */
+.content-services > h2, .content-services > p{
+    color: white;
+}
+
+.card-service h3{
+    font-size: 24px;
+}
+
+.card-service p{
+    margin-bottom: 0;
+}
+
+.contact{
+    padding-top: 100px;
+}
+
+@media (max-width: 767px){
+    .dentista{
+        text-align: center;
+    }
+    .dentista img{
+        max-width: 250px;
+    }
+}
