@@ -6,13 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Odonto Rio</title>
 
 </head>
 
 <body>
-    <header class="sticky-top bg-white shadow">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Faça seu login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+            
+            <div class="mb-2">
+                <label for="login">Digite seu login</label>
+                <input type="text" id="login" class="form-control">
+            </div>
+
+            <div class="mb-4">
+                <label for="login">Digite sua senha</label>
+                <input type="password" id="senha" class="form-control">
+            </div>
+
+            <button class="btn btn-primary w-100">Acessar sistema</button>
+
+        </form>
+      </div>
+      <div class="modal-footer flex-column align-items-end">
+        <a href="#">Esqueceu sua senha?</a>
+        <em>Seus dados estao protegidos</em>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <header class="sticky-top bg-white shadow"> <!--position:stick-->
         <nav class="navbar navbar-expand-xl">
             <div class="container">
 
@@ -46,20 +81,75 @@
                                 Saiba mais
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#" target="_blank">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <button class="btn btn-primary ms-lg-4">Faça seu login</button>
+                    <button class="btn btn-primary ms-lg-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Faça seu login</button>
                 </div>
             </div>
         </nav>
     </header>
 
-    <img src="img/banner-1.jpg" alt="banner1" class="w-100">
+    <!-- <img src="img/banner-1.jpg" alt="banner1" class="w-100"> -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" >
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+        </div>
 
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/banner-1.jpg" class="d-block w-100" alt="...">
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p class="text-white">Some representative placeholder content for the first slide.</p>
+                </div>
+
+            </div>
+
+        <div class="carousel-item" data-bs-interval="8000">
+            <img src="img/banner-2.jpg" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="carousel-item">
+            <img src="img/banner-3.jpg" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="carousel-item">
+            <img src="img/banner-4.jpg" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="carousel-item">
+            <img src="img/banner-5.jpg" class="d-block w-100" alt="...">
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+        <!--visually hidden e para o deficiente visual escutar oq é o botao-->
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Proximo</span>
+    </button>
+    </div>
+    <!-- fim do slider -->
 
     <div class="clinic container" id="quem-somos">
         <div class="row align-items-center"><!--quando voce adiciona o row, automaticamente é adicionado flex-->
@@ -128,26 +218,30 @@
                         <div class="col-sm-6 mb-4">
                             <div class="card-service bg-white p-4 rounded-3">
                                 <h3>Lorem ipsum dolor</h3>
-                                <p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit. Veniama optio cum molestiae</p>
+                                <p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit. Veniama optio cum molestiae
+                                </p>
                             </div>
                         </div>
                         <div class="col-sm-6 mb-4">
                             <div class="card-service bg-white p-4 rounded-3">
                                 <h3>Lorem ipsum dolor</h3>
-                                <p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit. Veniama optio cum molestiae</p>
+                                <p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit. Veniama optio cum molestiae
+                                </p>
                             </div>
                         </div>
 
                         <div class="col-sm-6 mb-4 ">
                             <div class="card-service bg-white p-4 rounded-3">
                                 <h3>Lorem ipsum dolor</h3>
-                                <p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit. Veniama optio cum molestiae</p>
+                                <p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit. Veniama optio cum molestiae
+                                </p>
                             </div>
                         </div>
                         <div class="col-sm-6 mb-4 ">
                             <div class="card-service bg-white p-4 rounded-3">
                                 <h3>Lorem ipsum dolor</h3>
-                                <p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit. Veniama optio cum molestiae</p>
+                                <p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit. Veniama optio cum molestiae
+                                </p>
                             </div>
                         </div>
 
@@ -165,7 +259,9 @@
 
             <div class="col-12">
                 <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam optio cum molestiae numquam nulla? Obcaecati similique at nesciunt tenetur quis corrupti laborum neque ipsam doloremque. Incidunt quam deleniti consequuntur impedit facere. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam optio cum molestiae numquam nulla?
+                    Obcaecati similique at nesciunt tenetur quis corrupti laborum neque ipsam doloremque. Incidunt quam
+                    deleniti consequuntur impedit facere. </p>
             </div>
 
             <div class="col-xl-6 ">
@@ -186,7 +282,7 @@
                         <textarea type="text" id="mensagem" class="form-control" rows="5" required></textarea>
                     </div>
 
-                    <button class="btn btn-primary" >Enviar</button>
+                    <button class="btn btn-primary">Enviar</button>
                 </form>
             </div>
 
@@ -198,11 +294,26 @@
 
     <footer class="bg-primary py-3 text-center text-white mt-5 mt-xl-0">
 
-    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam optio cum molestiae numquam nulla.</span>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam optio cum molestiae numquam nulla.</span>
 
     </footer>
 
+    
+    <a href="#" class="btn btn-success btn-whatsapp" target="_blank"><i class="bi bi-whatsapp h2"></i></a>
+    
+    
+
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        const carousel = new bootstrap.Carousel('#carouselExampleIndicators',{
+            interval: 4000,
+            pause:false
+        });
+            
+    </script>
+
 </body>
 
 </html>

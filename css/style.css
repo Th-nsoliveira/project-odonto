@@ -43,11 +43,34 @@ h1{
     padding-top: 100px;
 }
 
+.btn-whatsapp{
+    position:fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100;
+
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.header-scroll .btn-primary{
+    background-color: black
+}
+
+
 @media (max-width: 767px){
     .dentista{
         text-align: center;
     }
     .dentista img{
         max-width: 250px;
+    }
+
+    .btn-whatsapp{
+        bottom: 60px;
     }
 }
